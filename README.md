@@ -1,1 +1,66 @@
-# lol-champ-recommender
+# \# LoL Champion Recommender
+
+# 
+
+# A PyTorch champion recommendation system for League of Legends, trained on 40,000 ranked matches (Diamond+ elo), pulled directly from the Riot Games API.
+
+# 
+
+# Given a partial team composition and role, the model recommends the best champion picks based on ally synergies and enemy counters.
+
+# 
+
+# ---
+
+# 
+
+# \## How to Run
+
+# 
+
+# > Please note that the data is not included in this repository. Collecting 40,000 matches directly from the Riot API takes tens of hours due to Riot's rate limits. 
+
+# 
+
+# \### 1. Install dependencies
+
+# ```bash
+
+# pip install -r requirements.txt
+
+# ```
+
+# 
+
+# \### 2. Get a Riot API key
+
+# \- Go to \[developer.riotgames.com](https://developer.riotgames.com)
+
+# \- Log in and generate your API key
+
+# 
+
+# 
+
+# \### 3. Set up your `.env` file in the project root
+
+# ```
+
+# RIOT\_API\_KEY=RGAPI-your-key-here
+
+# ```
+
+# 
+
+# \### 4. Collect match data
+
+# ```bash
+
+# python src/collect\_matches.py
+
+# ```
+
+# This script targets 40,000 matches. Progress is automatically saved after every player — you can stop and resume at any time without losing data. Your data will be saved at <code> /data <code>.
+
+
+
