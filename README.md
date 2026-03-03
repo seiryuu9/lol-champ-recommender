@@ -33,3 +33,7 @@ Run the script at `src/collect_matches.py`
 
 This script targets 40,000 matches. Progress is automatically saved after every player — you can stop and resume at any time without losing data. Your data will be saved at `/data`.
 
+### 5. Clean match data
+Run the script at `src/prepare_data.py`
+This script normalizes data and prepares it for further use. We also encode the champions and roles. Lastly we split the set into test/training data.
+

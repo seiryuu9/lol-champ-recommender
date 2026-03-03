@@ -1,3 +1,11 @@
+"""
+Collects ranked match data from the Riot API for Diamond+ EUW players.
+Saves 10 rows per match (one per participant) with champion, role, team comp, and performance stats.
+Supports checkpointing — can be stopped and resumed without losing progress.
+
+Output: data/matches.csv
+"""
+
 import requests
 import time
 import pandas as pd
