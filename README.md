@@ -1,7 +1,7 @@
 # LoL Champion Recommender
 
  A PyTorch champion recommendation system for League of Legends, trained on 40,000 ranked matches (Diamond+ elo), pulled directly from the Riot Games API.
- Given a partial team composition and role, the model recommends the best champion picks based on ally synergies and enemy counters.  
+The model's job: given a role + 4 allies + 5 enemies + lane opponent, predict which champion to play based on ally synergies and enemy counters.  
  
  ---
 
@@ -37,3 +37,7 @@ This script targets 40,000 matches. Progress is automatically saved after every 
 Run the script at `src/prepare_data.py`
 This script normalizes data and prepares it for further use. We also encode the champions and roles. Lastly we split the set into test/training data.
 
+### 6. Model
+Run the script at `src/recommender.py`
+This is where the model actually trains to be able to recommend champions. It runs through the training data 30 times, printing loss each epoch, and saves the learned
+model weights.
